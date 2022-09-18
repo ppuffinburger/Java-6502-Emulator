@@ -1,7 +1,9 @@
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import javax.swing.JPanel;
-import javax.swing.Timer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class DisplayPanel extends JPanel implements ActionListener, KeyListener {
 	Timer t;
@@ -42,11 +44,11 @@ public class DisplayPanel extends JPanel implements ActionListener, KeyListener 
 		rightAlignHelper = Math.max(getWidth(), 1334);
 		
         //Title
-        g.setFont(new Font("Calibri Bold", 50, 50));
+        g.setFont(new Font("Calibri", Font.BOLD, 50));
         g.drawString("Ben Eater 6502 Emulator", 40, 50);
         
         //Version
-        g.setFont(new Font("Courier New Bold",20,20));
+        g.setFont(new Font("Courier New", Font.BOLD, 20));
         g.drawString("v"+EaterEmulator.versionString, 7, 1033);
         
         //Clocks
